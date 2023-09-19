@@ -17,4 +17,6 @@ player.on(
   }, 1000)
 );
 
-player.setCurrentTime(loadFromLS(LS_VIDEO_CURRENT_TIME_KEY));
+const currentTimeFromLS = loadFromLS(LS_VIDEO_CURRENT_TIME_KEY) || 0;
+player.setCurrentTime(currentTimeFromLS);
+
